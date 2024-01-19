@@ -19,6 +19,3 @@ function topKFrequent(nums: number[], k: number): number[] {
     .map(e => e.n)
     .slice(0, k);
 }
-
-console.log(topKFrequent([1, 1, 1, 2, 2, 2, 2, 2, 3], 2));
-

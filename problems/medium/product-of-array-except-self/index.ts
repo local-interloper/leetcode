@@ -1,11 +1,15 @@
 function productExceptSelf(nums: number[]): number[] {
-  const product = nums.reduce((a, c) => a * c, 1);
-  return nums.map((n, i) => {
-      if (n !== 0) return product / n;
+  const zeroCount = nums.reduce((a, c) => c === 0 ? a + 1 : a, 0);
+  const product = nums.reduce((a, c) => c === 0 ? a : a * c, 1);
 
-      return nums.reduce((a, c, j) => i === j ? a : a * c, 1);
-    }
-  );
+  if (zeroCount === 1) {
+
+    return nums.map((n) => n === 0 ? product : 0);
+  }
+
+  if (zeroCount > 1) {
+    return new Array(nums.length).fill(0);
+  }
+
+  return nums.map((n) => product / n);
 }
-
-console.log(productExceptSelf([1, 2, 3, 4]));
