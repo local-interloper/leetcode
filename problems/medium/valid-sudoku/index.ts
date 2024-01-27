@@ -32,7 +32,6 @@ const isValidRow = (board: string[][], y: number): boolean => {
   }
 
   return true;
-
 };
 
 const isValidCell = (board: string[][], i: number): boolean => {

@@ -8,4 +8,4 @@ There are many like it, but this one is mine.
 # Running the examples
 
 1. Install any typescript compiler/runner (for this project, `bun` was used)
-2. Run the index files under `problems/<difficulty>/<problem name>/index.ts`
+2. Run the index files under `problems/<difficulty>/<problem name>/index.js`
